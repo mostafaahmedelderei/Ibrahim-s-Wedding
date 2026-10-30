@@ -1326,3 +1326,165 @@ button:disabled {
 .arabic-names { letter-spacing: 0; font-family: Tahoma, Arial, sans-serif; line-height: 1.25; }
 .arabic .opening-names { font-family: Tahoma, Arial, sans-serif; letter-spacing: 0; }
 @media (max-width: 760px) { .topbar nav { flex-wrap: wrap; justify-content: center; } .memory-card:first-child { grid-column: auto; } }
+
+
+/* Invitation opening: button-led interaction, no swipe gesture */
+.big-envelope {
+  cursor: default;
+  touch-action: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  width: min(76vw, 510px);
+  height: clamp(225px, 34vw, 315px);
+  transform: perspective(1100px) rotateX(2deg);
+  filter: drop-shadow(0 34px 35px #4b1c2928);
+}
+
+.big-envelope:active {
+  cursor: default;
+}
+
+.opening-hint {
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.invitation-open-button {
+  margin-top: 22px;
+  min-width: 205px;
+  min-height: 54px;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  font-size: 10px;
+  box-shadow: 0 12px 28px #6f20351f;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease,
+    background 0.3s ease;
+}
+
+.invitation-open-button:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px #6f20352b;
+}
+
+.invitation-open-button:disabled {
+  opacity: 0.75;
+  cursor: wait;
+}
+
+.opening-screen {
+  padding: 48px 20px 42px;
+}
+
+.opening-screen .swipe-indicator {
+  display: none !important;
+}
+
+.is-opening .big-envelope {
+  animation: envelope-lift 1.35s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.is-opening .invitation-open-button {
+  animation: fade-away 0.35s ease both;
+}
+
+@keyframes envelope-lift {
+  0% {
+    transform: perspective(1100px) rotateX(2deg) translateY(0) scale(1);
+  }
+
+  35% {
+    transform: perspective(1100px) rotateX(2deg) translateY(-24px) scale(1.035);
+  }
+
+  100% {
+    transform: perspective(1100px) rotateX(2deg) translateY(-125vh) scale(1.08);
+    opacity: 0;
+  }
+}
+
+/* Arrival video replaces the old multi-stop placeholder route */
+.arrival-guide-card {
+  width: min(100%, 1000px);
+  margin: 42px auto 0;
+  overflow: hidden;
+  border: 1px solid #d8c2af;
+  background: #fbf5ed;
+  box-shadow: 0 24px 60px #6f203512;
+}
+
+.arrival-video-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #2b2021;
+}
+
+.arrival-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.arrival-guide-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px clamp(20px, 4vw, 42px);
+}
+
+.arrival-guide-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: #9b6a72;
+  font: 10px "DM Sans", sans-serif;
+  letter-spacing: 2.5px;
+}
+
+.arrival-guide-footer h3 {
+  margin: 0;
+  color: #6f2035;
+  font: 24px "Cormorant Garamond", Georgia, serif;
+}
+
+.arabic .arrival-guide-footer {
+  text-align: right;
+}
+
+.arabic .arrival-guide-kicker {
+  letter-spacing: 0;
+}
+
+@media (max-width: 600px) {
+  .big-envelope {
+    width: 88vw;
+    height: 235px;
+  }
+
+  .opening-screen {
+    padding-inline: 16px;
+  }
+
+  .invitation-open-button {
+    margin-top: 18px;
+  }
+
+  .arrival-guide-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .arrival-guide-footer .outline-button {
+    align-self: flex-start;
+  }
+
+  .arabic .arrival-guide-footer .outline-button {
+    align-self: flex-end;
+  }
+}
