@@ -144,13 +144,13 @@ function App() {
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
-  const message = isArabic
-    ? "مرحبًا إبراهيم وكارين! أود تأكيد حضوري لحفل زفافكما يوم ١ يناير ٢٠٢٧. ❤️"
-    : "Hi Ibrahim and Karen! I'd like to confirm my attendance at your wedding on January 1, 2027. ❤️";
+  // const message = isArabic
+  //   ? "مرحبًا إبراهيم وكارين! أود تأكيد حضوري لحفل زفافكما يوم ١ يناير ٢٠٢٧. ❤️"
+  //   : "Hi Ibrahim and Karen! I'd like to confirm my attendance at your wedding on January 1, 2027. ❤️";
 
-  const whatsappLink = `https://wa.me/${
-    SETTINGS.whatsapp
-  }?text=${encodeURIComponent(message)}`;
+  // const whatsappLink = `https://wa.me/${
+  //   SETTINGS.whatsapp
+  // }?text=${encodeURIComponent(message)}`;
 
   const countdown = [
     [timeLeft.days, t.days],
@@ -220,7 +220,7 @@ function App() {
                 ? "لحظة من فضلكم..."
                 : "JUST A MOMENT..."
               : t.openInvitation}
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"></span>
           </button>
 
           <p className="tap-note">01 — 01 — 2027</p>
@@ -349,7 +349,7 @@ function App() {
               className="outline-button"
               onClick={() => openLink(SETTINGS.mapsLink)}
             >
-              {t.openMap} ↗
+              {t.openMap} 
             </button>
           </div>
         </div>
@@ -385,7 +385,7 @@ function App() {
         </div>
       </section>
 
-      <section id="rsvp" className="rsvp-section">
+      {/* <section id="rsvp" className="rsvp-section">
         <p className="eyebrow">
           {isArabic ? "بكل حب" : "WITH LOVE"}
         </p>
@@ -399,9 +399,9 @@ function App() {
           target="_blank"
           rel="noreferrer"
         >
-          {t.rsvpButton} ↗
+          {t.rsvpButton} 
         </a>
-      </section>
+      </section> */}
 
       <section id="memories" className="memories-section">
         <article className="memory-card">
@@ -418,7 +418,7 @@ function App() {
             className="outline-button"
             onClick={() => openLink(SETTINGS.photoUploadForm)}
           >
-            {t.uploadButton} ↗
+            {t.uploadButton} 
           </button>
         </article>
 
@@ -432,7 +432,7 @@ function App() {
             className="outline-button"
             onClick={() => openLink(SETTINGS.guestbookForm)}
           >
-            {t.guestbookButton} ↗
+            {t.guestbookButton} 
           </button>
         </article>
       </section>
