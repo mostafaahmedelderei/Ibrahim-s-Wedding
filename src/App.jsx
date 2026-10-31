@@ -21,7 +21,7 @@ const copy = {
     whenWhereLabel: "✦ You are warmly invited ✦",
     whenWhereTitle: "When & Where",
     date: "Friday, January 1, 2027",
-    time: "5:00 PM",
+    time: "5:00 PM - 7:00 PM",
     venue: "Madar Venue",
     venueAddress: "Tolip Gardens Hotel — Gardenia Compound",
     arrivalTitle: "A little guide to finding us",
@@ -56,7 +56,7 @@ const copy = {
     messageLabel: "✦ A MESSAGE FROM THE HEART ✦",
 messageTitle: "Written in the Stars",
 messageParagraph1:
-  "With joy and sincere pleasure, we invite you to join us in celebrating a special beginning. As two lives come together in love and commitment, this evening marks the start of a beautiful journey shared side by side.",
+  "With joy and sincere pleasure, we invite you to join us in celebrating our KATB KETAB. As two lives come together in love and commitment, this evening marks the start of a beautiful journey shared side by side.",
 messageParagraph2:
   "Surrounded by those who matter most, we gather to honour this moment and create memories to be cherished. Your presence will truly add to the elegance and warmth of this occasion.",
 messageClosing: "With all our love",
@@ -74,7 +74,7 @@ messageSignature: "The Families of Ibrahim & Karen",
     whenWhereLabel: "✦ يوم الزفاف ✦",
     whenWhereTitle: "الموعد والمكان",
     date: "الجمعة، ١ يناير ٢٠٢٧",
-    time: "الساعة الخامسة مساءً",
+    time: "الساعة الخامسة مساءً - الساعة السابعة مساءً",
     venue: "Madar Venue",
     venueAddress: "فندق توليب جاردنز — كمبوند جاردينيا",
     arrivalTitle: "دليل الوصول إلى مكان الحفل",
@@ -108,11 +108,11 @@ messageSignature: "The Families of Ibrahim & Karen",
     messageLabel: "✦ رسالة من القلب ✦",
 messageTitle: "كأنها حكاية كُتبت في النجوم",
 messageParagraph1:
-  "بكل فرحة وسعادة، ندعوكم لمشاركتنا الاحتفال ببداية مميزة. فمع اجتماع قلبين على الحب والوفاء، تبدأ في هذه الليلة رحلة جميلة يسيران فيها معًا جنبًا إلى جنب.",
+  "بكل فرحة وسعادة، ندعوكم لمشاركتنا الاحتفال بكتب الكتاب . فمع اجتماع قلبين على الحب والوفاء، تبدأ في هذه الليلة رحلة جميلة يسيران فيها معًا جنبًا إلى جنب.",
 messageParagraph2:
   "وبين أحبائنا وأقرب الناس إلى قلوبنا، نجتمع لنحتفل بهذه اللحظة ونصنع ذكريات تبقى معنا للأبد. وجودكم سيضيف إلى هذه المناسبة المزيد من الدفء والجمال.",
 messageClosing: "بكل الحب",
-messageSignature: "عائلتا إبراهيم وكارن",
+messageSignature: "عائلتا إبراهيم وكارين",
   },
 };
 
@@ -224,7 +224,7 @@ function App() {
 
           <h1 className="opening-names">
             {isArabic ? "إبراهيم" : "Ibrahim"} <i>&</i>{" "}
-            {isArabic ? "كارن" : "Karen"}
+            {isArabic ? "كارين" : "Karen"}
           </h1>
 
           <p className="opening-hint">{t.envelopeHint}</p>
@@ -293,7 +293,7 @@ function App() {
         <h1 className={`hero-names ${isArabic ? "arabic-names" : ""}`}>
           <span>{isArabic ? "إبراهيم" : "Ibrahim"}</span>
           <i>&</i>
-          <span>{isArabic ? "كارن" : "Karen"}</span>
+          <span>{isArabic ? "كارين" : "Karen"}</span>
         </h1>
 
         <div className="hero-rule">
