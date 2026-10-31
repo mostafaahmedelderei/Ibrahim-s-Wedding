@@ -2445,3 +2445,36 @@ html {
     font-size: 16px;
   }
 }
+
+/* Countdown number boxes */
+.countdown > div {
+  background: #874052;
+  border: 1px solid #d6b477;
+  border-radius: 12px;
+  padding: 18px 14px;
+  min-width: 85px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.countdown > div span {
+  color: #fffaf2;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.countdown > div small {
+  color: #e8cfaa;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .countdown > div {
+    min-width: 65px;
+    padding: 12px 8px;
+  }
+
+  .countdown > div span {
+    font-size: 27px;
+  }
+}

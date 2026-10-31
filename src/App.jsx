@@ -297,7 +297,7 @@ function App() {
         </h1>
 
         <div className="hero-rule">
-          <span>✳</span>
+          <span>✦</span>
         </div>
 
         <p className="hero-date">
@@ -371,7 +371,7 @@ function App() {
 
   <div className="when-where-details">
     <div className="when-where-detail">
-      <span className="detail-icon">✳</span>
+      <span className="detail-icon">✦</span>
       <h3>
         <em>{t.date}</em>
       </h3>
@@ -468,7 +468,7 @@ function App() {
           ))}
         </div>
 
-        <div className="countdown-flourish">✳</div>
+        <div className="countdown-flourish">✦</div>
       </section>
 
       {/* SECTION 5 — DRESS CODE */}
