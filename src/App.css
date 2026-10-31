@@ -1,6 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
+/*@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 :root {
   --cream: #f3e9dd;
   --paper: #fbf5ed;
@@ -1486,5 +1486,962 @@ button:disabled {
 
   .arabic .arrival-guide-footer .outline-button {
     align-self: flex-end;
+  }
+}
+
+/* =========================================
+   NEW IBRAHIM & KAREN PAGE SECTIONS
+   Burgundy, cream and gold
+========================================= */
+
+:root {
+  --ik-burgundy: #6f2035;
+  --ik-burgundy-dark: #541729;
+  --ik-cream: #f3e9dd;
+  --ik-paper: #fbf5ed;
+  --ik-gold: #b78b83;
+  --ik-muted: #805b60;
+}
+
+/* Shared section animation */
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.invitation-message-section,
+.when-where-section,
+.countdown-section,
+.dress-code-section,
+.share-photos-section,
+.guestbook-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.invitation-message-section > *,
+.when-where-section > *,
+.countdown-section > *,
+.dress-code-section > *,
+.share-photos-section > *,
+.guestbook-section > * {
+  animation: section-reveal 0.8s ease both;
+}
+
+/* Section 2 — Invitation message */
+
+.invitation-message-section {
+  display: flex;
+  min-height: 440px;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 25px;
+  background:
+    radial-gradient(circle at 15% 20%, #8a405455, transparent 35%),
+    radial-gradient(circle at 85% 80%, #8a405433, transparent 35%),
+    var(--ik-burgundy);
+  color: var(--ik-cream);
+}
+
+.invitation-message-inner {
+  width: min(100%, 760px);
+  margin: auto;
+  text-align: center;
+}
+
+.invitation-message-section .eyebrow {
+  color: #e1c4b6;
+}
+
+.invitation-message-section h2 {
+  margin: 15px 0 25px;
+  color: var(--ik-cream);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.section-flourish {
+  margin: 15px 0;
+  color: #d7b29d;
+  font-size: 30px;
+}
+
+.message-divider {
+  display: flex;
+  width: min(220px, 60%);
+  align-items: center;
+  gap: 15px;
+  margin: 25px auto;
+  color: #d7b29d;
+}
+
+.message-divider span {
+  height: 1px;
+  flex: 1;
+  background: #d7b29d99;
+}
+
+.message-divider i {
+  font-size: 13px;
+  font-style: normal;
+}
+
+
+
+/* Section 3 — When and where */
+
+.when-where-section {
+  padding: 110px 25px;
+  background: var(--ik-cream);
+  text-align: center;
+}
+
+.when-where-section .section-title {
+  color: var(--ik-burgundy);
+}
+
+.when-where-details {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  width: min(100%, 850px);
+  align-items: center;
+  gap: 35px;
+  margin: 55px auto 65px;
+  padding: 38px 25px;
+  border-top: 1px solid #b78b8366;
+  border-bottom: 1px solid #b78b8366;
+}
+
+.when-where-detail {
+  text-align: center;
+}
+
+.detail-icon {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--ik-gold);
+  font-size: 30px;
+}
+
+.when-where-detail h3 {
+  margin: 0 0 10px;
+  color: var(--ik-burgundy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 3vw, 29px);
+  font-weight: 400;
+}
+
+.when-where-detail p {
+  margin: 0;
+  color: var(--ik-muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.detail-separator {
+  width: 1px;
+  height: 100px;
+  background: #b78b8377;
+}
+
+.arrival-heading {
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.arrival-heading h3 {
+  margin: 0 0 12px;
+  color: var(--ik-burgundy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 400;
+}
+
+.arrival-heading p {
+  margin: 0;
+  color: var(--ik-muted);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.arrival-guide-card {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #d8c2af;
+  background: var(--ik-paper);
+  box-shadow: 0 24px 65px #54172912;
+}
+
+.arrival-video-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #25191d;
+}
+
+.arrival-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.arrival-guide-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 28px clamp(20px, 4vw, 42px);
+  text-align: left;
+}
+
+.arrival-guide-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: #9b6a72;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+}
+
+.arrival-guide-footer h3 {
+  margin: 0 0 5px;
+  color: var(--ik-burgundy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.arrival-guide-footer p {
+  margin: 0;
+  color: var(--ik-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.arrival-guide-footer .outline-button {
+  flex-shrink: 0;
+}
+
+.calendar-link {
+  display: inline-block;
+  margin-top: 28px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--ik-gold);
+  color: var(--ik-burgundy) !important;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: .5px;
+  text-decoration: none;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.calendar-link:hover {
+  color: var(--ik-burgundy-dark) !important;
+  border-color: var(--ik-burgundy-dark);
+}
+
+/* Section 4 — Countdown */
+
+.countdown-section {
+  padding: 90px 20px 95px;
+  border: 0;
+  background:
+    radial-gradient(ellipse at center, #8b4055 0%, transparent 70%),
+    var(--ik-burgundy-dark);
+  text-align: center;
+}
+
+.countdown-section .eyebrow {
+  color: #e5c9bb;
+}
+
+.countdown-heading {
+  margin: 0 0 38px;
+  color: var(--ik-cream);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(27px, 4vw, 39px);
+  font-weight: 400;
+}
+
+.countdown {
+  gap: clamp(25px, 7vw, 90px);
+}
+
+.countdown-item span {
+  color: var(--ik-cream);
+  font-size: clamp(38px, 7vw, 65px);
+}
+
+.countdown-item small {
+  color: #e5c9bb;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.countdown-flourish {
+  margin-top: 35px;
+  color: #d7b29d;
+  font-size: 25px;
+}
+
+/* Section 5 — Dress code */
+
+.dress-code-section {
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 25px;
+  background: var(--ik-paper);
+  text-align: center;
+}
+
+.dress-code-section .eyebrow {
+  color: var(--ik-gold);
+}
+
+.dress-code-icon {
+  margin: 10px 0;
+  color: var(--ik-gold);
+  font-size: 44px;
+}
+
+.dress-code-section h2 {
+  margin: 10px 0 18px;
+  color: var(--ik-burgundy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 400;
+}
+
+.dress-code-section > p:last-of-type {
+  max-width: 570px;
+  margin: 0 auto;
+  color: var(--ik-muted);
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.dress-code-line {
+  width: 65px;
+  height: 1px;
+  margin-top: 30px;
+  background: var(--ik-gold);
+}
+
+/* Section 6 — Share photos */
+
+.share-photos-section {
+  display: flex;
+  min-height: 440px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 95px 25px;
+  background:
+    radial-gradient(circle at 10% 20%, #8a405455, transparent 35%),
+    var(--ik-burgundy);
+  text-align: center;
+}
+
+.share-photos-section .eyebrow {
+  color: #e5c9bb;
+}
+
+.memory-symbol {
+  margin: 5px 0 15px;
+  color: #d7b29d;
+  font-size: 42px;
+}
+
+.share-photos-section h2,
+.guestbook-section h2 {
+  margin: 0 0 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 5vw, 52px);
+  font-weight: 400;
+}
+
+.share-photos-section h2 {
+  color: var(--ik-cream);
+}
+
+.share-photos-section > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #f1e2d8;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.light-button {
+  display: inline-flex;
+  min-height: 51px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: 1px solid var(--ik-cream);
+  background: var(--ik-cream);
+  color: var(--ik-burgundy);
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: .7px;
+  transition: background .3s ease, color .3s ease, transform .3s ease;
+}
+
+.light-button:hover {
+  transform: translateY(-3px);
+  background: transparent;
+  color: var(--ik-cream);
+}
+
+/* Section 7 — Guestbook */
+
+.guestbook-section {
+  display: flex;
+  min-height: 420px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 95px 25px;
+  background: #ead8cb;
+  text-align: center;
+}
+
+.guestbook-section .eyebrow {
+  color: var(--ik-gold);
+}
+
+.guestbook-section h2 {
+  color: var(--ik-burgundy);
+}
+
+.guestbook-section > p:not(.eyebrow) {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  color: var(--ik-muted);
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Shared button colors */
+
+.outline-button {
+  border-color: var(--ik-burgundy);
+  color: var(--ik-burgundy) !important;
+}
+
+.outline-button:hover {
+  border-color: var(--ik-burgundy);
+  background: var(--ik-burgundy);
+  color: var(--ik-cream) !important;
+}
+
+/* Footer */
+
+.footer {
+  padding: 45px 20px 50px;
+  border-top: 1px solid #d8c2af;
+  background: var(--ik-paper);
+  text-align: center;
+}
+
+.footer p {
+  color: var(--ik-muted);
+}
+
+/* Navigation */
+
+.topbar nav {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.topbar nav a {
+  font-size: 9px;
+  letter-spacing: .8px;
+}
+
+html {
+  scroll-padding-top: 95px;
+}
+
+/* Arabic layout */
+
+.arabic .invitation-message-inner,
+.arabic .when-where-detail,
+.arabic .arrival-heading,
+.arabic .arrival-guide-footer,
+.arabic .dress-code-section,
+.arabic .share-photos-section,
+.arabic .guestbook-section {
+  text-align: center;
+}
+
+.arabic .arrival-guide-footer {
+  direction: rtl;
+}
+
+.arabic .arrival-guide-kicker {
+  letter-spacing: 0;
+}
+
+.arabic .countdown-item small {
+  letter-spacing: 0;
+}
+
+/* Mobile layout */
+
+@media (max-width: 760px) {
+  .topbar {
+    justify-content: space-between;
+  }
+
+  .topbar nav {
+    order: 3;
+    width: 100%;
+    gap: 12px 18px;
+  }
+
+  .topbar nav a {
+    font-size: 8px;
+  }
+
+
+
+  .when-where-section {
+    padding: 75px 18px;
+  }
+
+  .when-where-details {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin: 40px auto 48px;
+    padding: 30px 15px;
+  }
+
+  .detail-separator {
+    width: 75px;
+    height: 1px;
+    margin: auto;
+  }
+
+  .arrival-guide-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .arrival-guide-footer .outline-button {
+    align-self: flex-start;
+  }
+
+  .arabic .arrival-guide-footer .outline-button {
+    align-self: flex-end;
+  }
+
+  .countdown-section {
+    padding: 75px 15px;
+  }
+
+  .countdown {
+    gap: 22px;
+  }
+
+  .countdown-item span {
+    font-size: clamp(29px, 8vw, 42px);
+  }
+
+  .countdown-item small {
+    font-size: 9px;
+  }
+
+  .dress-code-section,
+  .share-photos-section,
+  .guestbook-section {
+    min-height: 360px;
+    padding: 75px 22px;
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar nav {
+    gap: 10px 13px;
+  }
+
+  .countdown {
+    gap: 15px;
+  }
+
+  .countdown-item span {
+    font-size: 27px;
+  }
+}
+
+/* =========================================
+   A MESSAGE FROM THE HEART
+   ========================================= */
+
+.heart-message-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Small heading */
+
+/* Small heading — matching the family signature */
+
+.heart-message-label {
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 10px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase;
+  color: #72545a !important;
+  margin-bottom: 12px;
+}
+
+
+/* Elegant italic title */
+
+.heart-message-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 5vw, 54px);
+  font-style: italic;
+  font-weight: 400;
+  color: #6f2035;
+  margin: 0 0 25px;
+}
+
+/* Main golden ray */
+
+.heart-ray,
+.heart-inner-ray {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.heart-ray {
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+.heart-ray span,
+.heart-inner-ray span {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #b89562,
+    #d8bd91
+  );
+}
+
+.heart-ray span:last-child,
+.heart-inner-ray span:last-child {
+  transform: scaleX(-1);
+}
+
+.heart-ray i,
+.heart-inner-ray i {
+  color: #b89562;
+  font-size: 19px;
+  font-style: normal;
+}
+
+/* Lighter message box */
+
+.heart-message-box {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 55px;
+  background: #fbf5ed;
+  border: 1px solid rgba(184, 149, 98, 0.45);
+  border-radius: 3px;
+  box-shadow: 0 8px 30px rgba(55, 30, 25, 0.06);
+}
+
+/* Quote marks */
+
+.opening-quote,
+.closing-quote {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 55px;
+  line-height: 0.7;
+  color: #b89562;
+  font-style: italic;
+}
+
+.opening-quote {
+  margin-bottom: 18px;
+}
+
+.closing-quote {
+  margin-top: 20px;
+}
+
+/* Message paragraphs */
+
+.heart-message-box p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #65434a;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+/* Divider between paragraphs */
+
+.heart-inner-ray {
+  max-width: 300px;
+  margin: 28px auto;
+  gap: 10px;
+}
+
+.heart-inner-ray i {
+  font-size: 15px;
+}
+
+/* Closing */
+
+.heart-message-ending {
+  margin-top: 35px;
+}
+
+.heart-closing {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 400;
+  color: #9b7656;
+  margin: 0 0 10px;
+}
+
+.heart-signature {
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #72545a;
+  margin: 0;
+}
+
+/* Arabic adjustments */
+
+.arabic .heart-message-label {
+  letter-spacing: 0;
+}
+
+.arabic .heart-message-box p {
+  line-height: 2.1;
+}
+
+.arabic .heart-signature {
+  letter-spacing: 0;
+  font-size: 13px;
+}
+
+/* Mobile */
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .heart-message-container {
+    padding: 10px 5px;
+  }
+
+  .heart-message-label {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+  }
+
+
+  .heart-message-title {
+    font-size: 39px;
+  }
+
+  .heart-message-box {
+    padding: 35px 22px;
+  }
+
+  .heart-message-box p {
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.8;
+  }
+
+  .heart-ray {
+    max-width: 260px;
+  }
+
+  .heart-message-ending {
+    margin-top: 28px;
+  }
+
+  .heart-closing {
+    font-size: 24px;
+  }
+}
+
+
+/* FINAL FIX — Heart message section */
+
+/* Make "With all our love" use the same font as "Written in the Stars" */
+.heart-message-ending .heart-closing {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 27px !important;
+  color: #9b7656 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+/* Lighter burgundy background for the message box */
+.heart-message-box {
+  background: #874052 !important;
+  border: 1px solid #b89562 !important;
+}
+
+/* Readable text inside the burgundy box */
+/* Romantic italic message text */
+.heart-message-box p {
+  font-family: "Cormorant Garamond", serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  color: #fbf5ed !important;
+}
+
+/* Quote marks */
+.heart-message-box .opening-quote,
+.heart-message-box .closing-quote {
+  color: #d6b77f !important;
+}
+.heart-message-title {
+  color: #9b7656 !important;
+}
+
+
+
+
+
+.countdown-heading em {
+  font-style: italic;
+}
+
+.countdown-ray {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 25px auto 30px;
+  width: min(360px, 80%);
+}
+
+.countdown-ray span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d6b477,
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(214, 180, 119, 0.65);
+}
+
+.countdown-ray i {
+  color: #d6b477;
+  font-size: 22px;
+  font-style: normal;
+  text-shadow: 0 0 12px rgba(214, 180, 119, 0.8);
+}
+
+.section-light-ray {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: min(240px, 65%);
+  margin: 18px auto 22px;
+}
+
+.section-light-ray span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d6b477,
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(214, 180, 119, 0.6);
+}
+
+.section-light-ray i {
+  color: #d6b477;
+  font-size: 18px;
+  font-style: normal;
+  text-shadow: 0 0 10px rgba(214, 180, 119, 0.8);
+}
+
+.dress-code-section h2 em,
+.share-photos-section h2 em,
+.guestbook-section h2 em {
+  font-style: italic;
+}
+
+
+.arrival-info-box {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 18px 24px;
+  border: 1px solid #d6b477;
+  border-radius: 12px;
+  background: rgba(214, 180, 119, 0.08);
+  text-align: center;
+}
+
+.arrival-info-box p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: inherit;
+}
+
+@media (max-width: 600px) {
+  .arrival-info-box {
+    margin: 20px 12px;
+    padding: 15px 16px;
+  }
+
+  .arrival-info-box p {
+    font-size: 16px;
   }
 }
