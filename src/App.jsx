@@ -28,7 +28,7 @@ const copy = {
     arrivalText:
       "Watch our short arrival guide, then use the directions button to reach the venue.",
       arrivalNote: "Need a little assistance getting to the venue? You may drive your car up to the entrance to drop off anyone who has difficulty walking the distance, then return to the designated parking area.",
-    openMap: "Get directions",
+    openMap: "📍 Get directions",
     countdown: "✦ COUNTING EVERY BREATH ✦",
     days: "Days",
     hours: "Hours",
@@ -387,31 +387,21 @@ function App() {
   <p className="venue-subtitle">{t.venueAddress}</p>
 </div>
 
+<div className="venue-directions">
+  <button
+    className="outline-button"
+    onClick={() => openLink(SETTINGS.mapsLink)}
+  >
+    {t.openMap}
+  </button>
+</div>
+
 <div className="venue-photo-wrap">
   <img
     className="venue-photo"
     src="/venue-photo.png"
     alt="Madar Venue wedding celebration setup"
   />
-</div>
-
-<div className="arrival-guide-card">
-  <div className="arrival-guide-footer">
-    <div>
-      <span className="arrival-guide-kicker">
-        {isArabic ? "مكان الاحتفال" : "THE WEDDING VENUE"}
-      </span>
-      <h3>{t.venue}</h3>
-      <p>{t.venueAddress}</p>
-    </div>
-
-    <button
-      className="outline-button"
-      onClick={() => openLink(SETTINGS.mapsLink)}
-    >
-      {t.openMap}
-    </button>
-  </div>
 </div>
 
   <div className="arrival-info-box">

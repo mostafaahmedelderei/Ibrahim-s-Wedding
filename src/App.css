@@ -2507,39 +2507,12 @@ html {
 }
 
 .arrival-heading {
-  margin: 10px auto 15px !important;
+  margin: 0 auto !important;
   text-align: center !important;
 }
 
 .arrival-heading h3 {
   margin: 0 !important;
-}
-
-.arrival-heading {
-  margin: 0 auto 0 !important;
-  text-align: center !important;
-}
-
-.arrival-heading h3 {
-  margin: 0 !important;
-}
-
-.venue-photo-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: -5px auto 5px !important;
-  padding: 0;
-  background: transparent;
-}
-
-.venue-photo {
-  display: block;
-  width: 1000000%;
-  max-width: 600px;
-  height: auto;
-  object-fit: contain;
-  background: transparent;
 }
 
 .venue-subtitle {
@@ -2549,4 +2522,21 @@ html {
   font-weight: 400;
 }
 
+/* Responsive venue image */
+.venue-photo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: -5px auto 5px !important;
+}
 
+.venue-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
