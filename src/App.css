@@ -2523,20 +2523,23 @@ html {
 }
 
 /* Responsive venue image */
+/* Venue image — full available screen width */
+
 .venue-photo-wrap {
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto 5px !important;
   padding: 0;
-  margin: -5px auto 5px !important;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .venue-photo {
   display: block;
   width: 100%;
-  height: auto;
   max-width: 100%;
+  height: auto;
+  margin: 0 auto;
   object-fit: contain;
 }
