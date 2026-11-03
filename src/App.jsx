@@ -61,6 +61,8 @@ messageParagraph2:
   "Surrounded by those who matter most, we gather to honour this moment and create memories to be cherished. Your presence will truly add to the love and warmth of this occasion.",
 messageClosing: "With all our love",
 messageSignature: "The Families of Ibrahim & Karen",
+parkingNoteTitle: "Parking & Drop-off Note",
+parkingNote: "You may briefly drop off guests at the venue entrance before parking your car in the designated parking area.",
   },
 
   ar: {
@@ -113,6 +115,9 @@ messageParagraph2:
   "نتطلع ان نعيش هذه اللحظة المميزة مع احبائنا, و ان نشارككم بداية فصل جديد من حياتنا. وجودكم معنا سيجعل هذه المناسبة اكثر جمالًا و دفئًا. ",
 messageClosing: "بكل الحب, ننتظركم ❤️.",
 messageSignature: "عائلتا إبراهيم وكارين",
+
+parkingNoteTitle: "ملاحظة بخصوص الانتظار والتوصيل",
+parkingNote: "يمكنكم إنزال الضيوف عند مدخل القاعة، ثم التوجه بالسيارة إلى منطقة الانتظار المخصصة.",
   },
 };
 
@@ -404,22 +409,13 @@ function App() {
   />
 </div>
 
-  <div className="arrival-info-box">
-    <p>{t.arrivalNote}</p>
-  </div>
+<div className="arrival-info-box">
+  <p>
+    <strong>{t.parkingNoteTitle}</strong>
+  </p>
+  <p>{t.parkingNote}</p>
+</div>
 
-  <a
-    className="calendar-link"
-    href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-      "Ibrahim & Karen Wedding"
-    )}&dates=20270101T170000/20270101T210000&ctz=Africa/Cairo&details=${encodeURIComponent(
-      "Celebrate Ibrahim and Karen's wedding at Madar Venue, Tolip Gardens Hotel, Gardenia Compound."
-    )}`}
-    target="_blank"
-    rel="noreferrer"
-  >
-    + {t.calendar}
-  </a>
 </section>
 
 

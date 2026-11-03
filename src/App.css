@@ -1734,24 +1734,6 @@ button:disabled {
   flex-shrink: 0;
 }
 
-.calendar-link {
-  display: inline-block;
-  margin-top: 28px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid var(--ik-gold);
-  color: var(--ik-burgundy) !important;
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  letter-spacing: .5px;
-  text-decoration: none;
-  transition: color .25s ease, border-color .25s ease;
-}
-
-.calendar-link:hover {
-  color: var(--ik-burgundy-dark) !important;
-  border-color: var(--ik-burgundy-dark);
-}
-
 /* Section 4 — Countdown */
 
 .countdown-section {
