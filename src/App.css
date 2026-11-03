@@ -2548,3 +2548,20 @@ html {
   margin: 5px 0 0 !important;
   font-weight: 400;
 }
+
+/* Venue image — mobile adjustment */
+@media (max-width: 600px) {
+  .venue-photo-wrap {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto 5px !important;
+  }
+
+  .venue-photo {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+  }
+}
