@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 const SETTINGS = {
-  photoUploadForm: "",
-  guestbookForm: "",
+  photoUploadForm: "https://docs.google.com/forms/d/e/1FAIpQLSfQydXWWijSu_oqQsrhAHO0jHWyWMuK_Ykl6YFkDW61tQ5YhQ/viewform?usp=publish-editor",
+  guestbookForm: "https://docs.google.com/forms/d/e/1FAIpQLSciGL_-o94pzUezjHVB06nB7ntAuKVu2lYJDSIEYaJPoWikYQ/viewform?usp=sharing&ouid=109805566666736194539",
   mapsLink: "https://maps.app.goo.gl/YmzvRtV3ACoNn9eW9?g_st=ic",
   arrivalVideo: "/arrival-guide.mp4",
   venueName: "Madar Venue — Tolip Gardens Hotel — Gardenia Compound",
@@ -14,14 +14,14 @@ const copy = {
     eyebrow: "✦ A SPECIAL INVITATION ✦",
     envelopeHint: "A LITTLE NOTE FOR YOU",
     openInvitation: "OPEN INVITATION",
-    invite: "Together with their families, invite you to celebrate",
+    invite: "Together with their families, invite you to celebrate their katb ketab",
     welcomeTitle: "WE WOULD LOVE TO CELEBRATE WITH YOU",
     welcomeText:
       "A special day, a beautiful beginning, and the people who make every moment unforgettable. We can't wait to celebrate with you.",
     whenWhereLabel: "✦ You are warmly invited ✦",
     whenWhereTitle: "When & Where",
     date: "Friday, January 1, 2027",
-    time: "5:00 PM - 7:00 PM",
+    time: "From 5:00 PM to 7:00 PM",
     venue: "Madar Venue",
     venueAddress: "Tolip Gardens Hotel — Gardenia Compound",
     arrivalTitle: "A little guide to finding us",
@@ -58,7 +58,7 @@ messageTitle: "Written in the Stars",
 messageParagraph1:
   "With joy and sincere pleasure, we invite you to join us in celebrating our KATB KETAB. As two lives come together in love and commitment, this evening marks the start of a beautiful journey shared side by side.",
 messageParagraph2:
-  "Surrounded by those who matter most, we gather to honour this moment and create memories to be cherished. Your presence will truly add to the elegance and warmth of this occasion.",
+  "Surrounded by those who matter most, we gather to honour this moment and create memories to be cherished. Your presence will truly add to the love and warmth of this occasion.",
 messageClosing: "With all our love",
 messageSignature: "The Families of Ibrahim & Karen",
   },
@@ -67,14 +67,14 @@ messageSignature: "The Families of Ibrahim & Karen",
     eyebrow: "✦ دعوة مميزة ✦",
     envelopeHint: "دعوة صغيرة لكم",
     openInvitation: "افتحوا الدعوة",
-    invite: "يسعدنا دعوتكم للاحتفال بزفافنا",
+    invite: "يسعدنا دعوتكم للاحتفال بعقد قراننا",
     welcomeTitle: "نتمنى أن تحتفلوا معنا",
     welcomeText:
       "يوم مميز وبداية جميلة، تكتمل بوجود الأشخاص الذين يجعلون كل لحظة أجمل. نتطلع للاحتفال معكم.",
     whenWhereLabel: "✦ يوم الزفاف ✦",
     whenWhereTitle: "الموعد والمكان",
     date: "الجمعة، ١ يناير ٢٠٢٧",
-    time: "الساعة الخامسة مساءً - الساعة السابعة مساءً",
+    time: " من الساعة الخامسة مساءً إلى الساعة السابعة مساءً",
     venue: "Madar Venue",
     venueAddress: "فندق توليب جاردنز — كمبوند جاردينيا",
     arrivalTitle: "دليل الوصول إلى مكان الحفل",
@@ -93,7 +93,7 @@ messageSignature: "The Families of Ibrahim & Karen",
     photosLabel: "✦ احتفظوا باللحظات ✦",
     uploadTitle: "شاركونا صوركم",
     uploadText:
-      "ساعدونا في الاحتفاظ بكل لحظة جميلة. التقطوا صوركم طوال الاحتفال وشاركونا إياها من خلال الرابط بالأسفل.",
+      "ساعدونا في الاحتفاظ بكل لحظة جميلة في يومنا... التقطوا صوركم طوال الاحتفال وشاركونا إياها من خلال الرابط بالأسفل.",
     uploadButton: "شاركوا صوركم",
     guestbookLabel: "✦ رسالة منكم ✦",
     guestbookTitle: "اتركوا لنا رسالة حب",
@@ -110,8 +110,8 @@ messageTitle: "كأنها حكاية كُتبت في النجوم",
 messageParagraph1:
   "بكل فرحة وسعادة، ندعوكم لمشاركتنا الاحتفال بكتب الكتاب . فمع اجتماع قلبين على الحب والوفاء، تبدأ في هذه الليلة رحلة جميلة يسيران فيها معًا جنبًا إلى جنب.",
 messageParagraph2:
-  "وبين أحبائنا وأقرب الناس إلى قلوبنا، نجتمع لنحتفل بهذه اللحظة ونصنع ذكريات تبقى معنا للأبد. وجودكم سيضيف إلى هذه المناسبة المزيد من الدفء والجمال.",
-messageClosing: "بكل الحب",
+  "نتطلع ان نعيش هذه اللحظة المميزة مع احبائنا, و ان نشارككم بداية فصل جديد من حياتنا. وجودكم معنا سيجعل هذه المناسبة اكثر جمالًا و دفئًا. ",
+messageClosing: "بكل الحب, ننتظركم ❤️.",
 messageSignature: "عائلتا إبراهيم وكارين",
   },
 };
@@ -361,7 +361,8 @@ function App() {
   </div>
 </section>
 
-      {/* SECTION 3 — WHEN & WHERE + ARRIVAL VIDEO */}
+
+{/* SECTION 3 — WHEN & WHERE */}
 <section id="when-where" className="when-where-section">
   <p className="eyebrow">{t.whenWhereLabel}</p>
 
@@ -377,74 +378,60 @@ function App() {
       </h3>
       <p>{t.time}</p>
     </div>
+  </div>
 
-    <div className="detail-separator" />
+<div className="arrival-heading">
+  <h3>
+    <em>{t.venue}</em>
+  </h3>
+  <p className="venue-subtitle">{t.venueAddress}</p>
+</div>
 
-    <div className="when-where-detail">
-      <span className="detail-icon">⌖</span>
-      <h3>
-        <em>{t.venue}</em>
-      </h3>
+<div className="venue-photo-wrap">
+  <img
+    className="venue-photo"
+    src="/venue-photo.png"
+    alt="Madar Venue wedding celebration setup"
+  />
+</div>
+
+<div className="arrival-guide-card">
+  <div className="arrival-guide-footer">
+    <div>
+      <span className="arrival-guide-kicker">
+        {isArabic ? "مكان الاحتفال" : "THE WEDDING VENUE"}
+      </span>
+      <h3>{t.venue}</h3>
       <p>{t.venueAddress}</p>
     </div>
+
+    <button
+      className="outline-button"
+      onClick={() => openLink(SETTINGS.mapsLink)}
+    >
+      {t.openMap}
+    </button>
   </div>
-
-  <div className="arrival-heading">
-    <h3>
-      <em>{t.arrivalTitle}</em>
-    </h3>
-    <p>{t.arrivalText}</p>
-  </div>
-
-        <div className="arrival-guide-card">
-          <div className="arrival-video-wrap">
-            <video
-              className="arrival-video"
-              controls
-              playsInline
-              preload="metadata"
-              poster="/arrival-guide-poster.jpg"
-            >
-              <source src={SETTINGS.arrivalVideo} type="video/mp4" />
-              {isArabic
-                ? "متصفحكم لا يدعم تشغيل الفيديو."
-                : "Your browser does not support this video."}
-            </video>
-          </div>
-
-          <div className="arrival-guide-footer">
-            <div>
-              <span className="arrival-guide-kicker">
-                {isArabic ? "موقع الحفل" : "WEDDING LOCATION"}
-              </span>
-              <h3>{t.venue}</h3>
-              <p>{t.venueAddress}</p>
-            </div>
-
-            <button
-              className="outline-button"
-              onClick={() => openLink(SETTINGS.mapsLink)}
-            >
-              {t.openMap}
-            </button>
-          </div>
-        </div>
-<div className="arrival-info-box">
-  <p>{t.arrivalNote}</p>
 </div>
-        <a
-          className="calendar-link"
-          href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-            "Ibrahim & Karen Wedding"
-          )}&dates=20270101T170000/20270101T210000&ctz=Africa/Cairo&details=${encodeURIComponent(
-            "Celebrate Ibrahim and Karen's wedding at Madar Venue, Tolip Gardens Hotel, Gardenia Compound."
-          )}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          + {t.calendar}
-        </a>
-      </section>
+
+  <div className="arrival-info-box">
+    <p>{t.arrivalNote}</p>
+  </div>
+
+  <a
+    className="calendar-link"
+    href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+      "Ibrahim & Karen Wedding"
+    )}&dates=20270101T170000/20270101T210000&ctz=Africa/Cairo&details=${encodeURIComponent(
+      "Celebrate Ibrahim and Karen's wedding at Madar Venue, Tolip Gardens Hotel, Gardenia Compound."
+    )}`}
+    target="_blank"
+    rel="noreferrer"
+  >
+    + {t.calendar}
+  </a>
+</section>
+
 
       {/* SECTION 4 — COUNTDOWN */}
       <section id="countdown" className="countdown-section">
