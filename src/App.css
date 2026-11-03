@@ -2526,12 +2526,11 @@ html {
 /* Venue image — full available screen width */
 
 .venue-photo-wrap {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 5px !important;
-  padding: 0;
-  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
   overflow: hidden;
 }
 
@@ -2540,6 +2539,5 @@ html {
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin: 0 auto;
   object-fit: contain;
 }
