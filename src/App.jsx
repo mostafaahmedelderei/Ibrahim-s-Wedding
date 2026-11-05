@@ -135,7 +135,10 @@ function getTimeLeft() {
 }
 
 function App() {
-  const [language, setLanguage] = useState("en");
+const [language, setLanguage] = useState(() => {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("lang") === "ar" ? "ar" : "en";
+});
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
